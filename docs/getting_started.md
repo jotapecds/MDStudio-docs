@@ -46,7 +46,7 @@ Quando o parâmetro possui o termo **DIM()** após a definição do seu tipo, é
 
 Os arquivos **pmk** são arquivos necessários para ser possível registrar e escrever o pmd documento com os dados alterados. Esta funcionalidade do PSRClasses gera automaticamente todos os formatos de arquivos necessários para representar as estruturas de dados contidas no(s) arquivo(s) pmd(s). Considerando a mesma classe do exemplo anterior, temos o exemplo de arquivo pmk.
 
-`Figuras 3: Exemplo de criação de um arquivo pmk a partir de um arquivo pmd.`
+`Figura 3: Exemplo de criação de um arquivo pmk a partir de um arquivo pmd.`
 
 <div style="text-align:center">
     <img src="../img/Picture3.png"/>
@@ -86,7 +86,7 @@ Os arquivos relacionados com a construção da visualização inicial do caso no
 
 O arquivo *TreeView.xml possui tags para realizar as separações necessárias para a divisão dos itens no formato de árvore e está localizado no lado esquerdo da interface (em laranja). Enquanto o arquivo *CollectionLayout.xml possui as informações para montar as seções do lado direito (em verde) referente a cada um desses itens (Figura 3).  
 
-`Figure 4: Representação dos arquivos *Treeview.xml e *CollectionLayout.xml na interface.`
+`Figura 4: Representação dos arquivos *Treeview.xml e *CollectionLayout.xml na interface.`
 
 <div style="text-align:center">
     <img src="../img/Picture4.png"/>
@@ -96,7 +96,7 @@ O arquivo *TreeView.xml possui tags para realizar as separações necessárias p
 
 No arquivo *TreeView.xml é possível iniciar a construção da árvore utilizando a tag **TemplateGroup**, sendo apenas necessário apenas o preenchimento do atributo **Name**, geralmente se referindo ao nome do modelo utilizado. Para criar um item para esta árvore, é preciso adicionar a tag **TemplateCollection**, preenchendo os atributos como **Name** de acordo com os nomes das classes no arquivo pmd. Para alterar o nome que será mostrado, basta alterar o nome da coleção no arquivo *LayoutDictionary.xml. As instruções para esta alteração estão presentes na ~~seção XXX~~.
 
-``Figure 5: Exemplo de configuração da árvore de visualização no arquivo xml.``
+``Figura 5: Exemplo de configuração da árvore de visualização no arquivo xml.``
 
 <div style="text-align:center">
     <img src="../img/Picture5.png"/>
@@ -106,13 +106,13 @@ No arquivo *TreeView.xml é possível iniciar a construção da árvore utilizan
 
 No arquivo *CollectionLayout.xml, encontra-se outras divisões do layout, separadas em tags.
 
-A tag **ElementCollection** é a primeira a ser definida. Ela se refere a cada coleção (ou classe), onde é possível também definir todas as suas características. Esta tag aparece na interface como visto na figura 3, equivalente ao mostrado como o *CollectionLayout.xml. Um exemplo do arquivo xml do uso do ElementCollection encontra-se na Figure 5. Esta tag pode conter várias flags, os essenciais são:
+A tag **ElementCollection** é a primeira a ser definida. Ela se refere a cada coleção (ou classe), onde é possível também definir todas as suas características. Esta tag aparece na interface como visto na figura 3, equivalente ao mostrado como o *CollectionLayout.xml. Um exemplo do arquivo xml do uso do ElementCollection encontra-se na Figura 5. Esta tag pode conter várias flags, os essenciais são:
 - **Name**: Representa o nome da coleção definida no PSRClasses ou a que foi definida no arquivo pmd;
 - **Model**: Representa o modelo que será utilizado como base para a coleção;
 
 Os parâmetros definidos no arquivo pmd serão definidos neste arquivo xml como **atributos** (Attribute). Os parâmetros atributos identificados com @id no arquivo pmd, são caracterizados como atributos identificadores, sendo definidos dentro da tag **InfoAttributes**. Todas as coleções precisam ter atributos identificadores.
 
-``Figure 6: Exemplo de configuração da tag ElementCollection no arquivo xml.``
+``Figura 6: Exemplo de configuração da tag ElementCollection no arquivo xml.``
 
 <div style="text-align:center">
     <img src="../img/Picture6.png"/>
@@ -129,7 +129,7 @@ Dentro da tag ElementCollection é possível criar outras tags para definir como
 4. TableAttributes: onde serão definidos os vetores e tabelas da coleção que foram previamente definidos no pmd (em azul);
 
 
-``Figure 7: Representação das tags GroupCollection, NaviagationCollection, Attributes e TableAttributes na interface.``
+``Figura 7: Representação das tags GroupCollection, NaviagationCollection, Attributes e TableAttributes na interface.``
 
 <div style="text-align:center">
     <img src="../img/Picture7.png"/>
@@ -144,14 +144,14 @@ Dentro da tag ElementCollection é possível criar outras tags para definir como
 
     - Translation: Representa o nome da tradução desejada definida no xml de traduções (*LayoutDictionary.xml);
 
-    ``Figure 8: Exemplo de configuração da tag GroupCollection no arquivo xml.``
+    ``Figura 8: Exemplo de configuração da tag GroupCollection no arquivo xml.``
 
     <div style="text-align:center">
         <img src="../img/Picture8.png"/>
     </div>
 
 2. NavigationCollection:
-    A navegação vai organizar a visualização dos grupos, tabelas e dados cronológicos. A tag `<Navigation></Navigation>` usada para definir uma navegação. Exemplo da utilização do NavigationCollection é mostrado na Figure 8.
+    A navegação vai organizar a visualização dos grupos, tabelas e dados cronológicos. A tag `<Navigation></Navigation>` usada para definir uma navegação. Exemplo da utilização do NavigationCollection é mostrado na Figura 8.
 
     - Name: Nome único de identificação para a navegação (por coleção).
 
@@ -161,16 +161,16 @@ Dentro da tag ElementCollection é possível criar outras tags para definir como
 
             Obs: Todas as tabelas caso não tenha dados seu nome fica em cinza claro.
 
-    ``Figure 9: Exemplo de configuração da tag NavigationCollection no arquivo xml.``
+    ``Figura 9: Exemplo de configuração da tag NavigationCollection no arquivo xml.``
 
     <div style="text-align:center">
         <img src="../img/Picture9.png"/>
     </div>
 
 3. Attributes:
-    Os atributos padrões definidos no pmd (como PARM) serão definidos nesta tag. Cada um deles será mostrado na interface como uma coluna em seu determinado grupo e como um campo na tela de “Properties”. Mais informações sobre atributo serão dadas na ~~seção XXX~~.  Exemplo da utilização do Attributes é mostrado na Figure 9.
+    Os atributos padrões definidos no pmd (como PARM) serão definidos nesta tag. Cada um deles será mostrado na interface como uma coluna em seu determinado grupo e como um campo na tela de “Properties”. Mais informações sobre atributo serão dadas na ~~seção XXX~~.  Exemplo da utilização do Attributes é mostrado na Figura 9.
 
-    ``Figure 10: Exemplo de configuração da tag Attributes no arquivo xml.``
+    ``Figura 10: Exemplo de configuração da tag Attributes no arquivo xml.``
 
     <div style="text-align:center">
         <img src="../img/Picture10.png"/>
@@ -179,9 +179,9 @@ Dentro da tag ElementCollection é possível criar outras tags para definir como
     Se definido um grupo é possível utilizar a flag Group, para fazer referência ao grupo em que o atributo faz parte.
 
 4. TableAttributes: 
-    O modo de visualização de um parâmetro vetor é dado em forma de tabela. Existem alguns padrões como modificação (registros espaçados), dados em blocos de anos fechados (cronológicos), modificações com cadastro (data de 1900), etc. Os parâmetros do tipo dimensão também são visualizados através de uma tabela. O tipo de visualização das tabelas é dado pelo campo “IndexType”, dependendo do número, o atributo é montado na tela de forma diferente (respeitando o tipo do dado). Todos os atributos do tipo tabela devem ser definidos na tag `<TableAttributes>`. Mais informações sobre atributo serão dadas na ~~seção XXX~~. Exemplo da utilização do TableAttributes é mostrado na Figure 10.
+    O modo de visualização de um parâmetro vetor é dado em forma de tabela. Existem alguns padrões como modificação (registros espaçados), dados em blocos de anos fechados (cronológicos), modificações com cadastro (data de 1900), etc. Os parâmetros do tipo dimensão também são visualizados através de uma tabela. O tipo de visualização das tabelas é dado pelo campo “IndexType”, dependendo do número, o atributo é montado na tela de forma diferente (respeitando o tipo do dado). Todos os atributos do tipo tabela devem ser definidos na tag `<TableAttributes>`. Mais informações sobre atributo serão dadas na ~~seção XXX~~. Exemplo da utilização do TableAttributes é mostrado na Figura 10.
 
-    ``Figure 11: Exemplo de configuração da tag TableAttributes no arquivo xml.``
+    ``Figura 11: Exemplo de configuração da tag TableAttributes no arquivo xml.``
 
     <div style="text-align:center">
         <img src="../img/Picture11.png"/>
