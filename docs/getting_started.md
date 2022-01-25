@@ -55,7 +55,7 @@ Os arquivos **pmk** são arquivos necessários para ser possível registrar e es
 A criação de um arquivo pmk a partir do pmd é realizada de forma automática, sendo necessária apenas realizar alguns comandos no shell do Windows. 
 
 ```shell
-$ gmask --path "path_do_pmd" -- context "Nome_do_modelo(sem espaço)"
+$ gmask --path "path_do_pmd" --context "Nome_do_modelo(sem espaço)"
 ```
 ```shell
 $ qtemplate --path "path_do_pmd"
@@ -120,13 +120,13 @@ Os parâmetros definidos no arquivo pmd serão definidos neste arquivo xml como 
 
 Dentro da tag ElementCollection é possível criar outras tags para definir como os atributos serão apresentados na interface. São divididas em (Figura 5):
 
-1. GroupCollection: Onde é possível definir grupos para dividir os atributos em abas (em amarelo).
+1. **GroupCollection**: Onde é possível definir grupos para dividir os atributos em abas (em amarelo).
 
-2. NavigationCollection: Onde será definido a estrutura de navegação das tabelas e grupos (em roxo);
+2. **NavigationCollection**: Onde será definido a estrutura de navegação das tabelas e grupos (em roxo);
 
-3. Attributes: Onde serão definidos os parâmetros da coleção que foram previamente definidos no pmd (em vermelho);
+3. **Attributes**: Onde serão definidos os parâmetros da coleção que foram previamente definidos no pmd (em vermelho);
 
-4. TableAttributes: onde serão definidos os vetores e tabelas da coleção que foram previamente definidos no pmd (em azul);
+4. **TableAttributes**: onde serão definidos os vetores e tabelas da coleção que foram previamente definidos no pmd (em azul);
 
 
 ``Figura 7: Representação das tags GroupCollection, NaviagationCollection, Attributes e TableAttributes na interface.``
@@ -135,7 +135,7 @@ Dentro da tag ElementCollection é possível criar outras tags para definir como
     <img src="../img/Picture7.png"/>
 </div>
 
-1. GroupCollection:
+1. **GroupCollection**:
     O grupo usa a tag `<Group></Group>`, podendo definir quantos grupos quiser, respeitando códigos distintos (na mesma coleção). Com a principal função para dividir os atributos em diversos contextos por tipo de elemento. Os atributos que podem ser definidos na tag são:
 
     - Code: Representa a identificação única do grupo e usado para associar ao atributo;
@@ -150,7 +150,7 @@ Dentro da tag ElementCollection é possível criar outras tags para definir como
         <img src="../img/Picture8.png"/>
     </div>
 
-2. NavigationCollection:
+2. **NavigationCollection**:
     A navegação vai organizar a visualização dos grupos, tabelas e dados cronológicos. A tag `<Navigation></Navigation>` usada para definir uma navegação. Exemplo da utilização do NavigationCollection é mostrado na Figura 8.
 
     - Name: Nome único de identificação para a navegação (por coleção).
@@ -167,7 +167,7 @@ Dentro da tag ElementCollection é possível criar outras tags para definir como
         <img src="../img/Picture9.png"/>
     </div>
 
-3. Attributes:
+3. **Attributes**:
     Os atributos padrões definidos no pmd (como PARM) serão definidos nesta tag. Cada um deles será mostrado na interface como uma coluna em seu determinado grupo e como um campo na tela de “Properties”. Mais informações sobre atributo serão dadas na ~~seção XXX~~.  Exemplo da utilização do Attributes é mostrado na Figura 9.
 
     ``Figura 10: Exemplo de configuração da tag Attributes no arquivo xml.``
@@ -178,7 +178,7 @@ Dentro da tag ElementCollection é possível criar outras tags para definir como
 
     Se definido um grupo é possível utilizar a flag Group, para fazer referência ao grupo em que o atributo faz parte.
 
-4. TableAttributes: 
+4. **TableAttributes**: 
     O modo de visualização de um parâmetro vetor é dado em forma de tabela. Existem alguns padrões como modificação (registros espaçados), dados em blocos de anos fechados (cronológicos), modificações com cadastro (data de 1900), etc. Os parâmetros do tipo dimensão também são visualizados através de uma tabela. O tipo de visualização das tabelas é dado pelo campo “IndexType”, dependendo do número, o atributo é montado na tela de forma diferente (respeitando o tipo do dado). Todos os atributos do tipo tabela devem ser definidos na tag `<TableAttributes>`. Mais informações sobre atributo serão dadas na ~~seção XXX~~. Exemplo da utilização do TableAttributes é mostrado na Figura 10.
 
     ``Figura 11: Exemplo de configuração da tag TableAttributes no arquivo xml.``
